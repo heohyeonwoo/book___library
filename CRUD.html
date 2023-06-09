@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>오픈소프트웨어 CRUD 도서대여사이트</title>
+        <link rel="stylesheet" href="./static/CSS/style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>도서 대여 사이트</h1>
+        </header>
+        <div class="left-sidebar">
+            <h2>&nbsp 도서 목록</h2>
+            <ul>
+                <div class="image">
+                    <li>자바를 부탁해</li>
+                    <img src="./static/images/1.jpeg" />
+                    <br />
+
+                    <li>쉽게 배우는 HTML5 웹 프로그래밍</li>
+                    <img src="./static/images/2.jpeg" />
+                    <br />
+
+                    <li>팀 개발을 위한 Git, GitHub 시작하기</li>
+                    <img src="./static/images/3.jpeg" />
+                    <br />
+
+                    <li>데이터 R지?</li>
+                    <img src="./static/images/4.jpeg" />
+                    <br />
+
+                    <li>Fast Track2</li>
+                    <img src="./static/images/5.jpeg" />
+                </div>
+            </ul>
+        </div>
+        <div class="main">
+            학번: <input type="text" placeholder="학번" id="studentId" />
+
+            이름: <input type="text" placeholder="이름" id="inputName" />
+
+            도서명: <input type="text" placeholder="도서명" id="bookName" />
+
+            <input type="submit" onclick="addList()" />
+
+            &nbsp <input type="text" placeholder="도서 대여 조회" id="searchKeyword" />
+            <input type="button" value="조회" onclick="searchRentals()" />
+
+            <table id="myTable" border="1">
+                <thead>
+                    <tr>
+                        <th>학번</th>
+                        <th>이름</th>
+                        <th>도서명</th>
+                        <th>대여일</th>
+                        <th>연장</th>
+                        <th>대여조회</th>
+                        <th>반납</th>
+                        <th>반납일</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </body>
+</html>
